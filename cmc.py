@@ -6,7 +6,6 @@ import cv2
 import numpy as np
 import time
 import copy
-from tools import metric
 import sys
 import matplotlib.pyplot as plt
 
@@ -377,11 +376,9 @@ class GMC:
         
         return warp_matrix
     
-       
-    
 def main(method,downscale):
     # video_path = '/home/zxc/catkin_ws/src/video/1.mp4'
-    video_path = '.\pitch.mp4'
+    video_path = '.\\pitch.mp4'
     # origin_path = './results/origin.avi'
     # result_path = './results/align.avi'
     
@@ -408,7 +405,6 @@ def main(method,downscale):
 
     pts = np.array([[325,152],[943,162],[1040,507],[182,485]],np.int32) 
     pts = pts.reshape((-1, 1, 2)) 
-    
 
     while True:
         ret,frame = cap.read()
